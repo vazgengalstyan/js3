@@ -1,0 +1,27 @@
+.block {
+    border: 0px solid black;
+    width: 70px;
+    height: 70px;
+    margin: 15px;
+    border-radius: 30px;
+}
+
+#div {
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 100px;
+    height: 280px;
+}
+
+#div1 {
+    border: 1px solid black;
+}
+
+#div2 {
+    border: 1px solid black
+}
+
+#div3 {
+    border: 1px solid black;
+}
