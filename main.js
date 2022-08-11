@@ -1,74 +1,42 @@
-let data = {
-    "Рыбы": {
-        "форель": {},
-        "лосось": {}
-    },
-    "Деревья": {
-        "Огромные": {
-            "секвойя": {},
-            "дуб": {}
-        },
-        "Цветковые": {
-            "яблоня": {},
-            "магнолия": {}
-        }
-    }
-};
+/*let inp1 = document.getElementById('input1');
+let inp2 = document.getElementById('input2');
+let inp3 = document.getElementById('input3');
+let divo = document.getElementById('divik');
+let but = document.getElementById('but');
+let func = () => {
+    let in1 = Number(inp1.value);
+    let in2 = inp2.value;
+    let in3 = Number(inp3.value);
 
-function createTreeDom(obj) {
-    let ul = document.createElement('ul');
+    if (in2 === '+') {
+        let sum = in1 + in3;
+        divo.style.display = 'block';
+        divo.append(sum);
 
-    for (let key in obj) {
-        let li = document.createElement('li');
-        li.style.color = 'red';
-        li.innerHTML = key;
+    } else if (in2 === '-') {
+        let sum = in1 - in3;
+        divo.style.display = 'block';
+        divo.append(sum);
+    } else if (in2 === '*') {
+        let sum = in1 * in3;
+        divo.style.display = 'block';
+        divo.append(sum);
 
-        let childrenUl = createTreeDom(obj[key]);
-        if (childrenUl) {
-            li.append(childrenUl);
-        }
+    } else if (in2 === '/') {
+        let sum = in1 / in3;
+        divo.style.display = 'block';
+        divo.append(sum);
+    } else if (inp2 !== '/' && '*' && '-' && '+') {
+        let sum = 'enter number';
+        divo.style.display = 'block';
+        divo.append(sum);
 
-        ul.append(li);
-    }
+    };
 
-    return ul;
-}
+}*/
 
-document.body.append(createTreeDom(data));
-
-
-
-
-let ar = [{ element: 'p', content: 'test text', id: 1 },
-    { element: 'div', class: 'block', id: 2 },
-    { element: 'input', value: 'test' }
-];
-
-let func = (arr) => {
-    for (let item in arr) {
-
-
-        console.log(arr[item].element)
-        if (arr[item].element === 'p') {
-            let p = document.createElement('p');
-            p.setAttribute('content', 'test text');
-            p.setAttribute('id', '1');
-            document.body.append(p);
-
-        } else if (arr[item].element === 'div') {
-            let div = document.createElement('div');
-            div.setAttribute('class', 'block');
-            div.setAttribute('id', '2');
-            document.body.append(div);
-        } else if (arr[item].element === 'input') {
-            let inp = document.createElement('input');
-            inp.setAttribute('value', 'test');
-            document.body.append(inp);
-
-        }
-    }
-
-}
-
-
-func(ar);
+let dd = document.getElementById('dvo');
+let x = document.documentElement.clientWidth;
+let y = document.documentElement.clientHeight
+let el = document.elementFromPoint(x, y);
+console.log(dd.getBoundingClientRect());
