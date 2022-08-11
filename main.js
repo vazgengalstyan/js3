@@ -1,4 +1,4 @@
-/*let inp1 = document.getElementById('input1');
+let inp1 = document.getElementById('input1');
 let inp2 = document.getElementById('input2');
 let inp3 = document.getElementById('input3');
 let divo = document.getElementById('divik');
@@ -33,10 +33,4 @@ let func = () => {
 
     };
 
-}*/
-
-let dd = document.getElementById('dvo');
-let x = document.documentElement.clientWidth;
-let y = document.documentElement.clientHeight
-let el = document.elementFromPoint(x, y);
-console.log(dd.getBoundingClientRect());
+}
