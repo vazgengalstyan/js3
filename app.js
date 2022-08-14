@@ -1,49 +1,36 @@
-/*Հետեւյալ օբյեկտից նկարել ծառ html-ում, և ծառի ամեն ճյուղը ներկել կարմիր*/
-let data = {
-  "Рыбы": {
-    "форель": {},
-    "лосось": {}
-  },
-  "Деревья": {
-    "Огромные": {
-      "секвойя": {},
-      "дуб": {}
-    },
-    "Цветковые": {
-      "яблоня": {},
-      "магнолия": {}
-    }
-  }
-};
- function createTree(obj) {
-     
-      let ul = document.createElement('ul');
+/*1. mknik@ sharjeluc element@ het@ petq e sharjvi.*/
 
-      for (let key in obj) {
-        let li = document.createElement('li');
-        li.innerHTML = key;
+let element = document.getElementById('box')
 
-        let childrenUl = createTree(obj[key]);
-        if (childrenUl) {
-          li.append(childrenUl);
-		  childrenUl.style.color = 'red'
-        }
+/* document.addEventListener('mousemove',function (e) {
+	element.style.top = e.clientY + 'px';
+	element.style.left = e.clientX + 'px';
 
-        ul.append(li);
-      }
+ })*/
+ 
+ /*2. mknik@ elementi vra bereluc petq e element@ haytnvi ekrani patahakan dirqum*/
+ 
+/*let mousemoveFunc = () => {
+    element.style.top =(Math.round(Math.random() * (window.innerHeight - element.offsetHeight))) + 'px';
+    element.style.left = (Math.round(Math.random() * (window.innerWidth - element.offsetWidth))) + 'px';
+ }
 
-      return ul;
-    }
-  let treeFunc = (wood, data)=> {
-    container.append(createTree(data));
-  }	
-  let container = document.getElementById('container');
-    treeFunc(container,data);  
+ element.addEventListener('mouseover',mousemoveFunc );*/
+ 
+  /*3.elementi vra sexmeluc petq e element@ stana random guyn*/
+ 
+/*element.onclick = function(click) {
+    let color = Math.floor(Math.random() * 16777215).toString(16);
+    element.style.backgroundColor = '#' + color;
+}*/
+
+/*4. mknikov bdi krananq element@ brnenq u texasharjenq*/
 
 
-/*[{element: 'p', content: 'test text', id: 1}, {element: 'div', class: 'block', id: 2}, {element: 'input', value: 'test'}] Գրել ֆունկցիա որը նման մասիվից html-ում կավելացնի էլեմենտներ։*/
+ /*5. ekrani cankacac tex click eneluc element@ bdi haytnvi @dtex*/
+ document.onclick = function(e) {
+    element.style.top = e.clientY + 'px';
+    element.style.left = e.clientX + 'px';
+}
 
-
-
-
-
+/*6. stexcel html-um forma (anun, axganun, email, tariq, ser, hasce) nshvac dashterov yev submit sexmeluc tpeq formai arjeqner@ console-um obyekti tesqov*/
