@@ -1,36 +1,69 @@
-let inp1 = document.getElementById('input1');
-let inp2 = document.getElementById('input2');
-let inp3 = document.getElementById('input3');
-let divo = document.getElementById('divik');
-let but = document.getElementById('but');
-let func = () => {
-    let in1 = Number(inp1.value);
-    let in2 = inp2.value;
-    let in3 = Number(inp3.value);
+let divo = document.querySelector('#divo');
 
-    if (in2 === '+') {
-        let sum = in1 + in3;
-        divo.style.display = 'block';
-        divo.append(sum);
 
-    } else if (in2 === '-') {
-        let sum = in1 - in3;
-        divo.style.display = 'block';
-        divo.append(sum);
-    } else if (in2 === '*') {
-        let sum = in1 * in3;
-        divo.style.display = 'block';
-        divo.append(sum);
+// 2
 
-    } else if (in2 === '/') {
-        let sum = in1 / in3;
-        divo.style.display = 'block';
-        divo.append(sum);
-    } else if (inp2 !== '/' && '*' && '-' && '+') {
-        let sum = 'enter number';
-        divo.style.display = 'block';
-        divo.append(sum);
+/*
+divo.onmousemove = function(event) {
 
-    };
+    divo.style.top = Math.random() * (window.innerHeight - divo.clientHeight) + "px";
+    divo.style.left = Math.random() * (window.innerWidth - divo.clientWidth) + "px";
+};
+*/
+
+//3
+/*divo.onclick = function(click) {
+    let col = Math.floor(Math.random() * 16777215).toString(16);
+    divo.style.backgroundColor = '#' + col;
 
 }
+*/
+
+
+//5
+
+/*document.onclick = function(event) {
+    divo.style.top = event.clientY + 'px';
+    divo.style.left = event.clientX + 'px';
+}
+*/
+
+
+//1
+/*document.onmousemove = function(event) {
+
+    divo.style.top = event.clientY + 'px';
+    divo.style.left = event.clientX + 'px';
+};
+*/
+
+
+//6
+let sub = document.querySelector('#submit');
+
+let anun = document.getElementById('name');
+let lastnem = document.getElementById('lastnem');
+let male = document.getElementById('male');
+let female = document.getElementById('female');
+let date = document.getElementById('date');
+let address = document.getElementById('address');
+let email = document.getElementById('email');
+
+let func = () => {
+    let user = {};
+    if (male.value === true) {
+        user.male = male.value;
+    } else {
+        user.female = female.value;
+    }
+    user.name = anun.value;
+    user.lastnem = lastnem.value;
+
+
+    user.date = date.value;
+    user.address = address.value;
+    user.email = email.value;
+    console.log(user)
+}
+
+sub.addEventListener('click', func);

@@ -6,24 +6,52 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
 
 </head>
 
 <body id="bodo">
-    <form action="/action_page.php">
-        <label for="fname">enter number</label>
-        <input type="text" id="input1" name="fname"><br><br>
-        <label>+ - * /</label>
-        <input type="text" id="input2" name="fname" style="margin-left: 45px"><br><br>
-        <label for="lname">enter number</label>
-        <input type="text" id="input3" name="lname"><br><br>
-        <button id="but" type="button" onclick="func()" style="width: 100px; margin-left: 90px; ">=</button>
+    <div id="divo" class="divik">
+
+    </div>
+
+
+
+    <form style="margin-top: 300px;">
+
+        <label> Firstname </label>
+        <input type="text" anunn="firstname" size="15" id="name" /> <br> <br>
+
+        <label> Lastname: </label>
+        <input type="text" name="lastname" size="15" id="lastnem" /> <br> <br>
+
+
+
+        <br>
+        <br>
+        <label>   
+Gender :  
+</label><br>
+        <input type="radio" name="male" id="male" /> Male <br>
+        <input type="radio" name="male" id="female" /> Female <br>
+
+        <br>
+        <br>
+
+        <label for="start">Start date:</label>
+
+        <input type="date" id="date" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+        <br>
+        <br>
+        <br>
+        <textarea cols="80" rows="5" value="address" id="address">  
+</textarea>
+        <br> <br> Email:
+        <input type="email" id="email" name="email" /> <br>
+        <br>
+        <br>
+        <input type="button" value="Submit" id="submit" />
     </form>
-    <div id="divik" style="width: 300px; height:100px; border:3px solid black; margin-left:300px;display: none; text-align: center;"></div>
-
-
-
 </body>
 <script src='main.js'></script>
 
