@@ -1,69 +1,44 @@
-let divo = document.querySelector('#divo');
+let email = document.querySelector('#username');
+let pass = document.querySelector('#password');
+let but = document.querySelector('#but2');
+let pp = document.querySelector('#p2');
+let divo = document.querySelector('#div1');
+let div2 = document.querySelector('#div5');
+let but1 = document.querySelector('#but');
 
-
-// 2
-
-/*
-divo.onmousemove = function(event) {
-
-    divo.style.top = Math.random() * (window.innerHeight - divo.clientHeight) + "px";
-    divo.style.left = Math.random() * (window.innerWidth - divo.clientWidth) + "px";
-};
-*/
-
-//3
-/*divo.onclick = function(click) {
-    let col = Math.floor(Math.random() * 16777215).toString(16);
-    divo.style.backgroundColor = '#' + col;
-
+function store() {
+    localStorage.setItem('email', email.value)
+    localStorage.setItem('pass', pass.value)
 }
-*/
 
 
-//5
-
-/*document.onclick = function(event) {
-    divo.style.top = event.clientY + 'px';
-    divo.style.left = event.clientX + 'px';
+but.onclick = function() {
+    store();
+    let em = localStorage.getItem('email');
+    let pas = localStorage.getItem('pass');
+    pp.innerHTML = `${em}     ${pas}`;
+    divo.style.display = 'block';
+    div2.style.display = 'none';
 }
-*/
+
+let local = () => {
+    if (localStorage.length !== 0) {
+        let em = localStorage.getItem('email');
+        let pas = localStorage.getItem('pass');
+        pp.innerHTML = `${em}     ${pas}`;
+
+        divo.style.display = 'block';
+        div2.style.display = 'none';
 
 
-//1
-/*document.onmousemove = function(event) {
-
-    divo.style.top = event.clientY + 'px';
-    divo.style.left = event.clientX + 'px';
-};
-*/
-
-
-//6
-let sub = document.querySelector('#submit');
-
-let anun = document.getElementById('name');
-let lastnem = document.getElementById('lastnem');
-let male = document.getElementById('male');
-let female = document.getElementById('female');
-let date = document.getElementById('date');
-let address = document.getElementById('address');
-let email = document.getElementById('email');
-
-let func = () => {
-    let user = {};
-    if (male.value === true) {
-        user.male = male.value;
-    } else {
-        user.female = female.value;
     }
-    user.name = anun.value;
-    user.lastnem = lastnem.value;
-
-
-    user.date = date.value;
-    user.address = address.value;
-    user.email = email.value;
-    console.log(user)
 }
+but1.onclick = function() {
+    window.localStorage.clear();
 
-sub.addEventListener('click', func);
+    divo.style.display = 'none';
+    div2.style.display = 'block';
+
+
+}
+local();
